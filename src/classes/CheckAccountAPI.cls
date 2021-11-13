@@ -5,13 +5,7 @@ global class CheckAccountAPI {
     global static List<Account> getAccounts() {
         List<Account> lst;
         
-        try {
-            lst = [select name, phone from Account];
-            return lst;
-        } catch (Exception ex) {
-            system.debug('Error: '+ex.getMessage());
-        }
-        
+        lst = [select name, phone from Account];
         return lst;
     }
 
